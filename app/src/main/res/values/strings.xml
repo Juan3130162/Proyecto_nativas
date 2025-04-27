@@ -10,4 +10,16 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="enter_email">Enter email</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_account">Create Account</string>
+    <string name="details_to_register">Fill in the details to register</string>
+    <string name="register">Register</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="text_new_password">Enter your email to rececive a new password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="message_email">We will send the new password to the registered email.</string>
+    <string name="send_email">Send email</string>
 </resources>

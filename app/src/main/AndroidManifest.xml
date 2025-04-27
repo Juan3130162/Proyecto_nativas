@@ -27,6 +27,10 @@
             android:exported="false"/>
         <activity android:name=".Activities.LoginActivity"
             android:exported="false"/>
+        <activity android:name=".Activities.RegisterActivity"
+            android:exported="false"/>
+        <activity android:name=".Activities.RecoverActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
