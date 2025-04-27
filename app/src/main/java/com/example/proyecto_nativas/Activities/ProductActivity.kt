@@ -11,10 +11,10 @@ class ProductActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
-        val btn_viweCart: Button = findViewById(R.id.btn_viwe_cart)
+        val btn_viweCart: Button = findViewById(R.id.btn_view_car)
 
         btn_viweCart.setOnClickListener {
-            val intent = Intent(this@ProductActivity, LoginActivity::class.java)
+            val intent = Intent(this@ProductActivity, ViewCarActivity::class.java)
             startActivity(intent)
             finish()
         }

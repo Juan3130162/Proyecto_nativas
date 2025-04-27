@@ -18,6 +18,18 @@
     <string name="enjoy_premium_sound_and_freedom_with_apple_airpods_designed_for_all_day_comfort">Enjoy premium sound and freedom with Apple AirPods, designed for all-day comfort.</string>
     <string name="Airpod">Airpod</string>
     <string name="game">Game</string>
-    <string name="viewCart">view cart</string>
+    <string name="viewCart">view car</string>
     <string name="smart_wash">Smart Wash</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="enter_email">Enter email</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="create_account">Create Account</string>
+    <string name="details_to_register">Fill in the details to register</string>
+    <string name="register">Register</string>
+    <string name="already_account">Already have an account</string>
+    <string name="recover_password">Recover Password</string>
+    <string name="text_new_password">Enter your email to rececive a new password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="message_email">We will send the new password to the registered email.</string>
+    <string name="send_email">Send email</string>
 </resources>
