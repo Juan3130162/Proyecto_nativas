@@ -10,4 +10,14 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="search_products">search_products</string>
+    <string name="view_cart">view_cart</string>
+    <string name="products">Products</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="airpod">airpod</string>
+    <string name="enjoy_premium_sound_and_freedom_with_apple_airpods_designed_for_all_day_comfort">Enjoy premium sound and freedom with Apple AirPods, designed for all-day comfort.</string>
+    <string name="Airpod">Airpod</string>
+    <string name="game">Game</string>
+    <string name="viewCart">view cart</string>
+    <string name="smart_wash">Smart Wash</string>
 </resources>
