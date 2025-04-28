@@ -1,25 +1,4 @@
 <resources>
-    <string name="app_name">TecnoPro</string>
-    <string name="initial_message">Tecnologia a tu alcance</string>
-    <string name="logo">Logo</string>
-    <string name="description_message">Explora un mundo de posiblidades con las mejores tecnologias.</string>
-    <string name="comienza">Comienza</string>
-    <string name="correo_electronico">Enter email</string>
-    <string name="sign_in_with_google">Sign in with Google</string>
-    <string name="enter_password">Enter password</string>
-    <string name="login">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="search_products">search_products</string>
-    <string name="view_cart">view_cart</string>
-    <string name="products">Products</string>
-    <string name="smartphone">Smartphone</string>
-    <string name="airpod">airpod</string>
-    <string name="enjoy_premium_sound_and_freedom_with_apple_airpods_designed_for_all_day_comfort">Enjoy premium sound and freedom with Apple AirPods, designed for all-day comfort.</string>
-    <string name="Airpod">Airpod</string>
-    <string name="game">Game</string>
-    <string name="viewCart">view car</string>
-    <string name="smart_wash">Smart Wash</string>
     <string name="enter_full_name">Enter full name</string>
     <string name="enter_email">Enter email</string>
     <string name="confirm_password">Confirm password</string>
@@ -32,7 +11,4 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="message_email">We will send the new password to the registered email.</string>
     <string name="send_email">Send email</string>
-    <string name="car">Car</string>
-    <string name="proceed_to_checkout">Proceed to Checkout</string>
-    <string name="back">Back</string>
 </resources>
