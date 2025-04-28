@@ -32,4 +32,7 @@
     <string name="enter_your_email">Enter your email</string>
     <string name="message_email">We will send the new password to the registered email.</string>
     <string name="send_email">Send email</string>
+    <string name="car">Car</string>
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
+    <string name="back">Back</string>
 </resources>
