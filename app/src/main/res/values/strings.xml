@@ -20,4 +20,7 @@
     <string name="game">Game</string>
     <string name="viewCart">view cart</string>
     <string name="smart_wash">Smart Wash</string>
+    <string name="car">Car</string>
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
+    <string name="back">Back</string>
 </resources>
