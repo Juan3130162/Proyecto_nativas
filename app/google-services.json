@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "739440269703",
+    "project_id": "tecnopro-tienda",
+    "storage_bucket": "tecnopro-tienda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739440269703:android:c253ed3792d1a5b5d21b22",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_nativas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ-mu31uZfT8VA_HEtwGd4G7sAoc335uM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
