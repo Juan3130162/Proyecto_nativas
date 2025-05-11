@@ -8,28 +8,38 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/Superior_nav_container"
+        android:name="com.example.proyecto_nativas.fragments.SuperiorNavFragment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
         android:id="@+id/tv_app_Products"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/products"
-        android:textSize="20sp"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container"
+        android:background="@color/second_color"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerProductos"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_app_Products"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav_container"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_container"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_Products" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/bottom_nav_container"
