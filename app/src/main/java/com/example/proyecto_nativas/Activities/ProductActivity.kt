@@ -1,55 +1,46 @@
 package com.example.proyecto_nativas.Activities
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto_nativas.R
-import com.google.firebase.auth.FirebaseAuth
-
-enum class ProviderType {Basic}
+import com.example.proyecto_nativas.adapters.ProductoAdapter
+import com.example.proyecto_nativas.models.Producto
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class ProductActivity : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var productoAdapter: ProductoAdapter
+    private lateinit var productos: List<Producto>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product)
 
-        val btn_viweCart: Button = findViewById(R.id.btn_view_car)
+        recyclerView = findViewById(R.id.recyclerProductos)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        btn_viweCart.setOnClickListener {
-            val intent = Intent(this@ProductActivity, ViewCarActivity::class.java)
-            startActivity(intent)
-            finish()
+        productos = leerProductosDesdeJson()
+
+        productoAdapter = ProductoAdapter(productos) {
+            // Aquí se manejaría el clic en "Agregar al carrito" (más adelante)
         }
 
-        //setUp
-
-
-        val bundle = intent.extras
-        val email = bundle?.getString("email")
-        val provider = bundle?.getString("provider")
-        setup (email ?: "", provider ?: "")
-
-
-
+        recyclerView.adapter = productoAdapter
     }
 
-    private fun setup(email: String, provider: String) {
+    private fun leerProductosDesdeJson(): List<Producto> {
+        val inputStream = assets.open("productos.json")
+        val reader = BufferedReader(InputStreamReader(inputStream))
+        val jsonString = reader.readText()
+        reader.close()
 
-        val emailTextView = findViewById<TextView>(R.id.emailTextView)
-//        val providerTextView = findViewById<TextView>(R.id.providerTextView)
-        val logOutButton = findViewById<Button>(R.id.logOutButton)
-
-        title = "Inicio"
-        emailTextView.text= email
-//        providerTextView.text= provider
-
-        logOutButton.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            onBackPressed()
-        }
-
+        val type = object : TypeToken<List<Producto>>() {}.type
+        return Gson().fromJson(jsonString, type)
     }
-
 }

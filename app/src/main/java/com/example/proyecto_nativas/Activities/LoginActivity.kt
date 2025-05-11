@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
+import com.example.proyecto_nativas.models.ProviderType
+
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,7 +90,8 @@ class LoginActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
+
+        private fun showHome(email: String, provider: ProviderType) {
 
         val homeIntent = Intent (this, ProductActivity::class.java).apply {
             putExtra("email", email)

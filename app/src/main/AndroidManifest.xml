@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Proyecto_nativas"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -21,20 +24,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:exported="false"/>
-        <activity android:name=".Activities.HomeActivity"
-            android:exported="false"/>
-        <activity android:name=".Activities.LoginActivity"
-            android:exported="false"/>
-        <activity android:name=".Activities.ProductActivity"
-            android:exported="false"/>
-        <activity android:name=".Activities.RegisterActivity"
-            android:exported="false"/>
-        <activity android:name=".Activities.RecoverActivity"
-            android:exported="false"/>
-        <activity android:name=".Activities.ViewCarActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.RecoverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ViewCarActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
