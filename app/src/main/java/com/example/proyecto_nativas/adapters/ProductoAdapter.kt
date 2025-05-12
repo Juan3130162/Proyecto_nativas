@@ -13,7 +13,8 @@ import com.example.proyecto_nativas.models.Producto
 
 class ProductoAdapter(
     private val listaProductos: List<Producto>,
-    private val onAddToCartClick: (Producto) -> Unit
+    private val onAddToCartClick: (Producto) -> Unit,
+    private val onItemClick: (Producto) -> Unit
 ) : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
 
     inner class ProductoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -36,13 +37,19 @@ class ProductoAdapter(
 
         Glide.with(holder.itemView.context)
             .load(producto.imagen_url)
-            .placeholder(R.drawable.ic_placeholder) // opcional
+            .placeholder(R.drawable.ic_placeholder)
             .into(holder.imgProducto)
 
         holder.btnAgregar.setOnClickListener {
             onAddToCartClick(producto)
         }
+
+        // 🚨 Nuevo: clic en la tarjeta completa
+        holder.itemView.setOnClickListener {
+            onItemClick(producto)
+        }
     }
+
 
     override fun getItemCount(): Int = listaProductos.size
 }

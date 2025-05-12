@@ -4,6 +4,12 @@
         android:id="@+id/menu_profile"
         android:title="Ir al perfil" />
     <item
+        android:id="@+id/agregar_producto"
+        android:title="Agregar Producto" />
+    <item
+        android:id="@+id/lista_de_producto"
+        android:title="Lista de Productos desde firebase" />
+    <item
         android:id="@+id/menu_logout"
         android:title="Cerrar sesión" />
 </menu>

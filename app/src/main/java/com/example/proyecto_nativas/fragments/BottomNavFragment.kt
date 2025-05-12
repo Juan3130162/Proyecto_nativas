@@ -83,6 +83,19 @@ class BottomNavFragment : Fragment() {
                     startActivity(intent)
                     true
                 }
+                R.id.agregar_producto -> {
+                    val intent = Intent(requireContext(), AddProductActivity::class.java)
+                    intent.putExtra("email", userEmail)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.lista_de_producto -> {
+                    val intent = Intent(requireContext(), ListaProductosActivity::class.java)
+                    intent.putExtra("email", userEmail)
+                    startActivity(intent)
+                    true
+                }
                 R.id.menu_logout -> {
                     FirebaseAuth.getInstance().signOut()
                     val intent = Intent(requireContext(), LoginActivity::class.java)

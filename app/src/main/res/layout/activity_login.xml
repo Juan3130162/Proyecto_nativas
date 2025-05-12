@@ -104,4 +104,10 @@
         app:strokeColor="@color/darkgray"
         app:strokeWidth="2dp" />
 
+    <Button
+        android:id="@+id/bnt_inicio_sesion_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inicio de sesion alternativo" />
+
 </LinearLayout>

@@ -2,10 +2,70 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ProfileActivity">
+    tools:context=".Activities.ProfileActivity"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgFotoPerfil"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/txtCorreoPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        app:layout_constraintStart_toEndOf="@+id/imgFotoPerfil"
+        app:layout_constraintTop_toTopOf="@+id/imgFotoPerfil"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/txtNombrePerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreoPerfil"
+        app:layout_constraintStart_toStartOf="@+id/txtCorreoPerfil" />
+
+    <TextView
+        android:id="@+id/txtApellidoPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apellido"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombrePerfil"
+        app:layout_constraintStart_toStartOf="@+id/txtNombrePerfil" />
+
+    <TextView
+        android:id="@+id/txtUsuarioPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Usuario"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoPerfil"
+        app:layout_constraintStart_toStartOf="@+id/txtApellidoPerfil" />
+
+    <TextView
+        android:id="@+id/txtEdadPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edad"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsuarioPerfil"
+        app:layout_constraintStart_toStartOf="@+id/txtUsuarioPerfil" />
+
+    <Button
+        android:id="@+id/btnEditarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar perfil"
+        app:layout_constraintTop_toBottomOf="@+id/txtEdadPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/Superior_nav_container"

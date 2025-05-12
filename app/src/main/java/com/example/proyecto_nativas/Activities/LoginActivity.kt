@@ -1,18 +1,20 @@
 package com.example.proyecto_nativas.Activities
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
+import com.example.proyecto_nativas.Activities.LoginAlternativo.InicioSesionActivity
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
 import com.example.proyecto_nativas.models.ProviderType
 
 
 class LoginActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -37,6 +39,12 @@ class LoginActivity : AppCompatActivity() {
 //            val intent = Intent(this@LoginActivity, ProductActivity::class.java)
 //            startActivity(intent)
 //        }
+        val btnLoginAlt: Button = findViewById(R.id.bnt_inicio_sesion_alt)
+
+        btnLoginAlt.setOnClickListener {
+            val intent = Intent(this@LoginActivity, InicioSesionActivity::class.java)
+            startActivity(intent)
+        }
 
         //registrarse
         Setup ()
