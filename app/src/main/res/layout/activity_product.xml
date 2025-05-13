@@ -33,16 +33,6 @@
         android:background="@color/second_color"/>
 
 
-    <Button
-        android:id="@+id/btnGuardarProducto"
-        android:layout_width="127dp"
-        android:layout_height="32dp"
-        android:layout_margin="16dp"
-        android:text="Guardar producto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_app_Products"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerProductos"
         android:layout_width="0dp"

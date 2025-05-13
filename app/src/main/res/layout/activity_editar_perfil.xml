@@ -10,13 +10,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom_nav_container"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -24,6 +24,7 @@
                 android:id="@+id/edtNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mono_bold"
                 android:hint="Nombre"
                 android:inputType="textPersonName" />
 
@@ -31,6 +32,7 @@
                 android:id="@+id/edtApellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mono_bold"
                 android:hint="Apellido"
                 android:inputType="textPersonName" />
 
@@ -38,6 +40,7 @@
                 android:id="@+id/edtEdad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mono_bold"
                 android:hint="Edad"
                 android:inputType="number" />
 
@@ -45,6 +48,7 @@
                 android:id="@+id/edtUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mono_bold"
                 android:hint="Nombre de usuario"
                 android:inputType="textPersonName" />
 
@@ -54,21 +58,42 @@
                 android:layout_height="200dp"
                 android:layout_marginTop="16dp"
                 android:background="#E0E0E0"
-                android:scaleType="centerCrop"
-                android:contentDescription="Foto de perfil" />
+                android:contentDescription="Foto de perfil"
+                android:scaleType="centerCrop" />
 
-            <Button
-                android:id="@+id/btnTomarFoto"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Tomar Foto" />
+                android:layout_height="69dp"
+                android:background="@color/main_color"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnTomarFoto"
+                    android:layout_width="287dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/main_color"
+                    android:fontFamily="@font/mono_bold"
+                    android:paddingLeft="80dp"
+                    android:text="Tomar Foto"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="87dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/baseline_add_a_photo_24" />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btnGuardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/main_color"
+                android:fontFamily="@font/mono_bold"
                 android:text="Guardar Cambios"
-                android:layout_marginTop="8dp" />
+                android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
 

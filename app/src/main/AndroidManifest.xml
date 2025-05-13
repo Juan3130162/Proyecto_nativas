@@ -13,6 +13,24 @@
         android:theme="@style/Theme.Proyecto_nativas"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.VerUsuariosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Pedidos.MisPedidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Pedidos.VerPedidosAtendidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.Pedidos.VerPedidosPendientesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.AdministracionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.VerCarritoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.EditarPerfilActivity"
             android:exported="false" />
         <activity

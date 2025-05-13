@@ -47,7 +47,8 @@ class CrearCuentaActivity : AppCompatActivity() {
                             "apellido" to apellido,
                             "edad" to edad,
                             "usuario" to usuario,
-                            "email" to email
+                            "email" to email,
+                            "admin" to false // ✅ CAMPO PARA RESTRINGIR ACCESO A FUNCIONES DE ADMIN
                         )
 
                         db.collection("usuarios").document(uid).set(datosUsuario)
@@ -68,5 +69,6 @@ class CrearCuentaActivity : AppCompatActivity() {
                 Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 }

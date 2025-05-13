@@ -11,6 +11,8 @@ import com.example.proyecto_nativas.R
 import com.example.proyecto_nativas.adapters.ProductoAdapter
 import com.example.proyecto_nativas.models.Producto
 import com.google.firebase.firestore.FirebaseFirestore
+import com.example.proyecto_nativas.data.CarritoRepository
+
 
 class ListaProductosActivity : AppCompatActivity() {
 
@@ -21,6 +23,9 @@ class ListaProductosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_productos)
+
+        CarritoRepository.init(applicationContext)
+
 
         recyclerView = findViewById(R.id.recyclerFirebase)
         recyclerView.layoutManager = LinearLayoutManager(this)

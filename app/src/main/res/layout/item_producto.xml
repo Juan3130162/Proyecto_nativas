@@ -24,6 +24,7 @@
             android:id="@+id/txtNombreProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mono_bold"
             android:paddingTop="8dp"
             android:text="Nombre del producto"
             android:textColor="@color/black"
@@ -34,6 +35,7 @@
             android:id="@+id/txtPrecioProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mono_bold"
             android:paddingTop="4dp"
             android:text="$0"
             android:textColor="@color/main_color"
@@ -45,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/main_color"
+            android:fontFamily="@font/mono_bold"
             android:text="Agregar al carrito"
             android:textColor="@android:color/white" />
     </LinearLayout>

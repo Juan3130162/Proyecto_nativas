@@ -4,11 +4,18 @@
         android:id="@+id/menu_profile"
         android:title="Ir al perfil" />
     <item
-        android:id="@+id/agregar_producto"
-        android:title="Agregar Producto" />
+        android:id="@+id/menu_admin"
+        android:title="Administración"/>
+<!--        android:icon="@drawable/ic_admin_icon"-->
+
     <item
         android:id="@+id/lista_de_producto"
         android:title="Lista de Productos desde firebase" />
+
+    <item
+        android:id="@+id/menu_mis_pedidos"
+        android:title="Mis pedidos" />
+
     <item
         android:id="@+id/menu_logout"
         android:title="Cerrar sesión" />

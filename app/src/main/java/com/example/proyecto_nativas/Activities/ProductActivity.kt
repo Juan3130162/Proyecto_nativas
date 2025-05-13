@@ -48,40 +48,9 @@ class ProductActivity : AppCompatActivity() {
 
         ///////////////////////////////////////////////////// base de datos firebase inicio
 
-        val btnGuardar = findViewById<Button>(R.id.btnGuardarProducto)
-
-        btnGuardar.setOnClickListener {
-            guardarProductoEnFirestore()
-        }
-    }
-
-    private fun guardarProductoEnFirestore() {
-        val db = FirebaseFirestore.getInstance()
-
-//        val producto = Producto("Celular", "Samsung Galaxy A32", 750000)
-        val producto = Producto(
-            id = "", // Firestore generará un ID automáticamente si lo dejas vacío
-            nombre = "Celular",
-            imagen_url = "", // O una URL si la tienes
-            descripcion = "Samsung Galaxy A32",
-            precio = 750000
-        )
-
-        db.collection("productos")
-            .add(producto)
-            .addOnSuccessListener {
-                Log.d("Firestore", "Producto guardado con éxito")
-            }
-            .addOnFailureListener {
-                Log.e("Firestore", "Error al guardar", it)
-            }
-
-
-
-
-
 
     }
+
 
     /////////////////////////////////////////////////////base de datos firebase fin
 

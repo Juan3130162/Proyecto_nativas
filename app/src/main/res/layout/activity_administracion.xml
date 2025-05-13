@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Activities.ProfileActivity">
+
+
+    <!-- Título principal -->
+
+    <!-- Subtítulo -->
+
+    <!-- Botón: Agregar Producto -->
+
+    <TextView
+        android:id="@+id/txtAdminTitulo"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/mono_bold"
+        android:text="Sección de Administración"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnPedidosAtendidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/main_color"
+        android:fontFamily="@font/mono_bold"
+        android:text="Ver pedidos atendidos"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPedidosSinAtender" />
+
+    <Button
+        android:id="@+id/btnPedidosSinAtender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/main_color"
+        android:fontFamily="@font/mono_bold"
+        android:text="Ver pedidos sin atender"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVerUsuarios" />
+
+    <TextView
+        android:id="@+id/txtAdminDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/mono_bold"
+        android:text="Desde aquí puedes gestionar productos, usuarios y pedidos realizados por los clientes."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAdminTitulo" />
+
+    <Button
+        android:id="@+id/btnVerUsuarios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/main_color"
+        android:fontFamily="@font/mono_bold"
+        android:text="Ver lista de usuarios registrados"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAgregarProductoAdmin" />
+
+    <Button
+        android:id="@+id/btnAgregarProductoAdmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/main_color"
+        android:fontFamily="@font/mono_bold"
+        android:text="Agregar producto"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAdminDescripcion" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/Superior_nav_container"
+        android:name="com.example.proyecto_nativas.fragments.SuperiorNavFragment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botón: Ver lista de usuarios -->
+
+    <!-- Botón: Ver pedidos sin atender -->
+
+    <!-- Botón: Ver pedidos atendidos -->
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_nav_container"
+        android:name="com.example.proyecto_nativas.fragments.BottomNavFragment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

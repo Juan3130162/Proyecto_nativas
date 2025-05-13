@@ -7,10 +7,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.proyecto_nativas.Activities.ListaProductosActivity
 import com.example.proyecto_nativas.Activities.LoginActivity
 import com.example.proyecto_nativas.Activities.ProductActivity
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
+import com.example.proyecto_nativas.data.CarritoRepository
+
 
 class InicioSesionActivity : AppCompatActivity() {
 
@@ -31,7 +34,8 @@ class InicioSesionActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, ProductActivity::class.java)
+                            CarritoRepository.init(applicationContext) // <- ¡IMPORTANTE!
+                            val intent = Intent(this, ListaProductosActivity::class.java)
                             intent.putExtra("email", email)
                             startActivity(intent)
                             finish()

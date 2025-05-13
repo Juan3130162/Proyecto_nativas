@@ -1,15 +1,19 @@
 package com.example.proyecto_nativas.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.proyecto_nativas.R
+import com.example.proyecto_nativas.data.CarritoRepository
 import com.example.proyecto_nativas.models.Producto
+import com.example.proyecto_nativas.models.ProductoSQLite
 
 class ProductoAdapter(
     private val listaProductos: List<Producto>,
@@ -41,15 +45,29 @@ class ProductoAdapter(
             .into(holder.imgProducto)
 
         holder.btnAgregar.setOnClickListener {
+            val productoSQLite = ProductoSQLite(
+                productoId = producto.id,
+                nombre = producto.nombre,
+                precio = producto.precio,
+                cantidad = 1,
+                imagenUrl = producto.imagen_url
+            )
+
+            CarritoRepository.agregarProducto(holder.itemView.context, productoSQLite)
+
+            val cantidadTotal = CarritoRepository.contarProductos(holder.itemView.context)
+            val intent = Intent("ACTUALIZAR_CARRITO")
+            intent.putExtra("cantidad_total", cantidadTotal)
+            holder.itemView.context.sendBroadcast(intent)
+
+            Toast.makeText(holder.itemView.context, "${producto.nombre} agregado al carrito", Toast.LENGTH_SHORT).show()
             onAddToCartClick(producto)
         }
 
-        // 🚨 Nuevo: clic en la tarjeta completa
         holder.itemView.setOnClickListener {
             onItemClick(producto)
         }
     }
-
 
     override fun getItemCount(): Int = listaProductos.size
 }
