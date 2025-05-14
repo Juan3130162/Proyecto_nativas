@@ -8,8 +8,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.proyecto_nativas.Activities.ListaProductosActivity
-import com.example.proyecto_nativas.Activities.LoginActivity
-import com.example.proyecto_nativas.Activities.ProductActivity
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
 import com.example.proyecto_nativas.data.CarritoRepository

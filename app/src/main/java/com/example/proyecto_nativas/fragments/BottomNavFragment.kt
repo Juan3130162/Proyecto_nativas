@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.proyecto_nativas.Activities.*
+import com.example.proyecto_nativas.Activities.LoginAlternativo.InicioSesionActivity
 import com.example.proyecto_nativas.Activities.Pedidos.MisPedidosActivity
 import com.example.proyecto_nativas.R
 import com.example.proyecto_nativas.data.CarritoRepository
@@ -88,7 +89,7 @@ class BottomNavFragment : Fragment() {
         super.onDestroyView()
         try {
             requireContext().applicationContext.unregisterReceiver(carritoReceiver)
-        } catch (e: IllegalArgumentException) {
+        } catch (e : IllegalArgumentException) {
             // Ya fue desregistrado o nunca registrado
         }
     }
@@ -129,7 +130,7 @@ class BottomNavFragment : Fragment() {
                         }
                         R.id.menu_logout -> {
                             FirebaseAuth.getInstance().signOut()
-                            startActivity(Intent(requireContext(), LoginActivity::class.java))
+                            startActivity(Intent(requireContext(), InicioSesionActivity::class.java))
                             requireActivity().finish()
                             true
                         }
