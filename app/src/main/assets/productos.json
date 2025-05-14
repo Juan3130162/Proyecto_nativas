@@ -1,0 +1,72 @@
+[
+  {
+    "id": "prod001",
+    "nombre": "Smartphone ZTE Nubia Music 2",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Teléfono inteligente con pantalla de 6.7 pulgadas HD+, procesador Octa-core y cámara trasera de 50MP.",
+    "precio": 499000
+  },
+  {
+    "id": "prod002",
+    "nombre": "Audífonos Lenovo Thinkplus GM2 Pro",
+    "imagen_url": "https://www.korolos.com.co/wp-content/uploads/2024/11/LenovoGM2Negro-Korolos1.jpg",
+    "descripcion": "Auriculares inalámbricos con diseño ergonómico y sonido envolvente, ideales para gaming y música.",
+    "precio": 159000
+  },
+  {
+    "id": "prod003",
+    "nombre": "Tablet Samsung Galaxy Tab A8",
+    "imagen_url": "https://d2j6dbq0eux0bg.cloudfront.net/images/29139035/2932640523.jpg",
+    "descripcion": "Tablet de 10.5 pulgadas con procesador Octa-core y batería de larga duración, perfecta para entretenimiento y estudio.",
+    "precio": 899000
+  },
+  {
+    "id": "prod004",
+    "nombre": "Smartwatch Xiaomi Mi Watch Lite",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Reloj inteligente con monitoreo de actividad física, GPS integrado y resistencia al agua.",
+    "precio": 299000
+  },
+  {
+    "id": "prod005",
+    "nombre": "Laptop HP Pavilion 15",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Portátil con procesador Intel Core i5, 8GB de RAM y 256GB SSD, ideal para trabajo y estudio.",
+    "precio": 2299000
+  },
+  {
+    "id": "prod006",
+    "nombre": "Cámara Canon EOS Rebel T7",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Cámara réflex digital con sensor de 24.1MP y grabación de video Full HD, perfecta para fotografía profesional.",
+    "precio": 1999000
+  },
+  {
+    "id": "prod007",
+    "nombre": "Consola PlayStation 5",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Consola de videojuegos de última generación con gráficos avanzados y amplia biblioteca de juegos.",
+    "precio": 2999000
+  },
+  {
+    "id": "prod008",
+    "nombre": "Bicicleta Eléctrica Xiaomi Mi Electric",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Bicicleta eléctrica plegable con autonomía de hasta 45 km y diseño compacto para movilidad urbana.",
+    "precio": 1899000
+  },
+  {
+    "id": "prod009",
+    "nombre": "Monitor LG UltraGear 27\"",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Monitor gaming de 27 pulgadas con resolución QHD y frecuencia de actualización de 144Hz.",
+    "precio": 1299000
+  },
+  {
+    "id": "prod010",
+    "nombre": "Router TP-Link Archer AX50",
+    "imagen_url": "https://cdn.smart-gsm.com/img/picture/big/zte-nubia-music.jpg",
+    "descripcion": "Router Wi-Fi 6 de doble banda con velocidades ultrarrápidas y cobertura amplia para el hogar.",
+    "precio": 499000
+  }
+]

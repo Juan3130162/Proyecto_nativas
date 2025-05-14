@@ -12,19 +12,22 @@
             android:id="@+id/edtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mono_bold"
             android:hint="Nombre del producto" />
 
         <EditText
             android:id="@+id/edtPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Precio" />
+            android:fontFamily="@font/mono_bold"
+            android:hint="Precio"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/edtDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/mono_bold"
             android:hint="Descripción" />
 
         <ImageView
@@ -39,13 +42,21 @@
             android:id="@+id/btnTomarFoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_color"
+            android:fontFamily="@font/mono_bold"
             android:text="Tomar foto" />
 
         <Button
             android:id="@+id/btnGuardar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_color"
+            android:fontFamily="@font/mono_bold"
             android:text="Guardar producto" />
 
+
+
     </LinearLayout>
+
+
 </ScrollView>

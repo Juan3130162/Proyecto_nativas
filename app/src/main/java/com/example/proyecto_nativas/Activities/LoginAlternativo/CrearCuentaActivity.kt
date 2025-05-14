@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.proyecto_nativas.Activities.ProductActivity
+import com.example.proyecto_nativas.Activities.ListaProductosActivity
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -53,7 +53,7 @@ class CrearCuentaActivity : AppCompatActivity() {
 
                         db.collection("usuarios").document(uid).set(datosUsuario)
                             .addOnSuccessListener {
-                                val intent = Intent(this, ProductActivity::class.java)
+                                val intent = Intent(this, ListaProductosActivity::class.java)
                                 intent.putExtra("email", email)
                                 startActivity(intent)
                                 finish()

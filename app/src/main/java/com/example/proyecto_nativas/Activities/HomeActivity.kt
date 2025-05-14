@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.proyecto_nativas.Activities.LoginAlternativo.InicioSesionActivity
 import com.example.proyecto_nativas.R
 
 class HomeActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         val btnComenzar: Button = findViewById(R.id.btn_comenzar)
 
         btnComenzar.setOnClickListener {
-            val intent = Intent(this@HomeActivity, LoginActivity::class.java)
+            val intent = Intent(this@HomeActivity, InicioSesionActivity::class.java)
             startActivity(intent)
             finish()
         }
