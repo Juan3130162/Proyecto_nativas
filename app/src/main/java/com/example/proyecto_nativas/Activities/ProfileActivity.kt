@@ -8,7 +8,6 @@ import com.bumptech.glide.Glide
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import java.io.File
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -55,11 +54,15 @@ class ProfileActivity : AppCompatActivity() {
                     txtApellido.text = document.getString("apellido") ?: "N/A"
                     txtUsuario.text = document.getString("usuario") ?: "N/A"
                     txtEdad.text = (document.getLong("edad")?.toString() ?: "N/A")
+                    txtCorreo.text = document.getString("email") ?: "N/A"
 
-                    val rutaFoto = getExternalFilesDir(null)?.absolutePath + "/foto_perfil.jpg"
-                    val archivo = File(rutaFoto)
-                    if (archivo.exists()) {
-                        Glide.with(this).load(archivo).into(imgPerfil)
+                    val urlFoto = document.getString("foto_url")
+                    if (!urlFoto.isNullOrEmpty()) {
+                        Glide.with(this)
+                            .load(urlFoto)
+                            .placeholder(R.drawable.ic_placeholder)
+                            .error(R.drawable.ic_placeholder)
+                            .into(imgPerfil)
                     }
                 } else {
                     txtNombre.text = "No registrado"
@@ -72,4 +75,5 @@ class ProfileActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error al cargar perfil", Toast.LENGTH_SHORT).show()
             }
     }
+
 }
