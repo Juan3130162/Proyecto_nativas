@@ -43,7 +43,7 @@ class BottomNavFragment : Fragment() {
         tvUserEmail.text = userEmail ?: "Usuario"
 
         btnHome.setOnClickListener {
-            val intent = Intent(requireContext(), ProductActivity::class.java)
+            val intent = Intent(requireContext(), ListaProductosActivity::class.java)
             startActivity(intent)
         }
 
