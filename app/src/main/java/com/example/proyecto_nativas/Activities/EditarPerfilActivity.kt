@@ -7,11 +7,12 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.proyecto_nativas.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import java.io.File
-import java.io.FileOutputStream
+import com.google.firebase.storage.FirebaseStorage
+import java.io.ByteArrayOutputStream
 
 class EditarPerfilActivity : AppCompatActivity() {
 
@@ -25,7 +26,11 @@ class EditarPerfilActivity : AppCompatActivity() {
 
     private val uid = FirebaseAuth.getInstance().currentUser?.uid
     private val db = FirebaseFirestore.getInstance()
+    private val storage = FirebaseStorage.getInstance()
     private val RQ_CAMERA = 101
+
+    private var fotoBitmap: Bitmap? = null
+    private var urlFoto: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,25 +57,54 @@ class EditarPerfilActivity : AppCompatActivity() {
             val edad = edtEdad.text.toString().toIntOrNull() ?: 0
             val usuario = edtUsuario.text.toString()
 
-            if (uid != null) {
-                val datos = mapOf(
-                    "nombre" to nombre,
-                    "apellido" to apellido,
-                    "edad" to edad,
-                    "usuario" to usuario,
-                    "email" to FirebaseAuth.getInstance().currentUser?.email
-                )
+            if (uid == null) return@setOnClickListener
 
-                db.collection("usuarios").document(uid).set(datos)
+            // Si hay foto, primero subirla, luego guardar datos
+            if (fotoBitmap != null) {
+                val refFoto = storage.reference.child("fotos_perfil/perfil_$uid.jpg")
+                val baos = ByteArrayOutputStream()
+                fotoBitmap!!.compress(Bitmap.CompressFormat.JPEG, 90, baos)
+                val datos = baos.toByteArray()
+
+                refFoto.putBytes(datos)
                     .addOnSuccessListener {
-                        Toast.makeText(this, "Perfil actualizado", Toast.LENGTH_SHORT).show()
-                        finish()
+                        refFoto.downloadUrl.addOnSuccessListener { uri ->
+                            urlFoto = uri.toString()
+                            guardarDatos(nombre, apellido, edad, usuario)
+                        }
                     }
                     .addOnFailureListener {
-                        Toast.makeText(this, "Error al guardar perfil", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Error al subir imagen", Toast.LENGTH_SHORT).show()
                     }
+            } else {
+                guardarDatos(nombre, apellido, edad, usuario)
             }
         }
+    }
+
+    private fun guardarDatos(nombre: String, apellido: String, edad: Int, usuario: String) {
+        if (uid == null) return
+
+        val datos = mutableMapOf<String, Any>(
+            "nombre" to nombre,
+            "apellido" to apellido,
+            "edad" to edad,
+            "usuario" to usuario,
+            "email" to FirebaseAuth.getInstance().currentUser?.email.orEmpty()
+        )
+
+        urlFoto?.let {
+            datos["foto_url"] = it
+        }
+
+        db.collection("usuarios").document(uid).set(datos)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Perfil actualizado", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Error al guardar perfil", Toast.LENGTH_SHORT).show()
+            }
     }
 
     private fun cargarDatos() {
@@ -84,10 +118,9 @@ class EditarPerfilActivity : AppCompatActivity() {
                     edtEdad.setText(doc.getLong("edad")?.toString() ?: "")
                     edtUsuario.setText(doc.getString("usuario") ?: "")
 
-                    val ruta = getExternalFilesDir(null)?.absolutePath + "/foto_perfil.jpg"
-                    val archivo = File(ruta)
-                    if (archivo.exists()) {
-                        imgPreview.setImageBitmap(android.graphics.BitmapFactory.decodeFile(ruta))
+                    val url = doc.getString("foto_url")
+                    if (!url.isNullOrEmpty()) {
+                        Glide.with(this).load(url).into(imgPreview)
                     }
                 }
             }
@@ -98,18 +131,9 @@ class EditarPerfilActivity : AppCompatActivity() {
         if (requestCode == RQ_CAMERA && resultCode == Activity.RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as? Bitmap
             imageBitmap?.let {
+                fotoBitmap = it
                 imgPreview.setImageBitmap(it)
-                guardarFotoLocal(it)
             }
         }
-    }
-
-    private fun guardarFotoLocal(bitmap: Bitmap) {
-        val ruta = getExternalFilesDir(null)?.absolutePath + "/foto_perfil.jpg"
-        val archivo = File(ruta)
-        val stream = FileOutputStream(archivo)
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 90, stream)
-        stream.flush()
-        stream.close()
     }
 }
