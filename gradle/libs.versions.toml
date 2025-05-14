@@ -1,8 +1,8 @@
 [versions]
-agp = "8.9.1"
+agp = "8.9.2"
 firebaseBom = "33.13.0"
 kotlin = "2.0.21"
-coreKtx = "1.15.0"
+coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -30,7 +30,8 @@ glideCompiler = { module = "com.github.bumptech.glide:compiler", version = "4.16
 
 gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
 
-firestore = { module = "com.google.firebase:firebase-firestore-ktx", version = "24.10.3" }
+firestore = { module = "com.google.firebase:firebase-firestore-ktx", version = "25.1.4" }
+firebase-storage = { module = "com.google.firebase:firebase-storage-ktx", version = "21.0.1" }
 
 
 

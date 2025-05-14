@@ -58,6 +58,9 @@ dependencies {
 
     implementation(libs.firestore)
 
+    implementation(libs.firebase.storage)
+
+
 
 
 
