@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imgProductoCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:contentDescription="Imagen del producto"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txtNombreCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mono_bold"
+            android:paddingTop="8dp"
+            android:text="Nombre del producto"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPrecioCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mono_bold"
+            android:text="Precio total"
+            android:textColor="@color/main_color"
+            android:textSize="14sp"
+            android:paddingTop="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/btnRestar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:fontFamily="@font/mono_bold"
+                android:textSize="18sp"
+                android:backgroundTint="@color/main_color"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txtCantidadCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_marginHorizontal="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/mono_bold" />
+
+            <Button
+                android:id="@+id/btnSumar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:fontFamily="@font/mono_bold"
+                android:textSize="18sp"
+                android:backgroundTint="@color/main_color"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_product"
+    android:id="@+id/activity_lista_productos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-
+    android:background="@color/white"
+    tools:context=".Activities.ListaProductosActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/Superior_nav_container"
@@ -32,11 +32,11 @@
         app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container"
         android:background="@color/second_color"/>
 
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerProductos"
+        android:id="@+id/recyclerFirebase"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,4 +50,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
