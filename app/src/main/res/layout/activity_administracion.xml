@@ -8,12 +8,6 @@
     tools:context=".Activities.ProfileActivity">
 
 
-    <!-- Título principal -->
-
-    <!-- Subtítulo -->
-
-    <!-- Botón: Agregar Producto -->
-
     <TextView
         android:id="@+id/txtAdminTitulo"
         android:layout_width="379dp"
@@ -108,12 +102,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Botón: Ver lista de usuarios -->
-
-    <!-- Botón: Ver pedidos sin atender -->
-
-    <!-- Botón: Ver pedidos atendidos -->
 
 
     <androidx.fragment.app.FragmentContainerView

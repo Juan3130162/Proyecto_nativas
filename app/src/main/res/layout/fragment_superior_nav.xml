@@ -7,9 +7,6 @@
     android:background="@color/semigray">
 
 
-    <!-- Aquí agregas los botones, textos, imagenes, etc. -->
-
-
     <TextView
         android:id="@+id/tv_menu"
         android:layout_width="match_parent"

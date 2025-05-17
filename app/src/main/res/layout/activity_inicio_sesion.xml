@@ -26,11 +26,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Iniciar sesión"
+        android:backgroundTint="@color/main_color"
         android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/btn_registrarse_Alt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/main_color"
         android:text="Registrarse" />
 </LinearLayout>

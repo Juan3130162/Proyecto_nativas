@@ -50,9 +50,10 @@
 
             <Button
                 android:id="@+id/btnRestar"
-                android:layout_width="40dp"
+                android:layout_width="60dp"
                 android:layout_height="40dp"
                 android:text="-"
+                android:gravity="center"
                 android:fontFamily="@font/mono_bold"
                 android:textSize="18sp"
                 android:backgroundTint="@color/main_color"
@@ -70,13 +71,15 @@
 
             <Button
                 android:id="@+id/btnSumar"
-                android:layout_width="40dp"
+                android:layout_width="60dp"
                 android:layout_height="40dp"
-                android:text="+"
-                android:fontFamily="@font/mono_bold"
-                android:textSize="18sp"
                 android:backgroundTint="@color/main_color"
-                android:textColor="@android:color/white" />
+                android:fontFamily="@font/mono_bold"
+                android:text="+"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
         </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
