@@ -100,7 +100,7 @@ class AddProductActivity : AppCompatActivity() {
         val producto = Producto(
             id = "",
             nombre = nombre,
-            imagen_url = currentPhotoPath, // ruta local de la imagen
+            imagen_url = currentPhotoPath, // ruta local de imagenes
             descripcion = descripcion,
             precio = precio
         )

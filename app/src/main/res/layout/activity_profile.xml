@@ -102,14 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottom_nav_container"
-        android:name="com.example.proyecto_nativas.fragments.BottomNavFragment"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -138,6 +131,18 @@
             android:text="Edad"
             android:textAlignment="textStart"
             android:textStyle="bold" />
+
     </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottom_nav_container"
+            android:name="com.example.proyecto_nativas.fragments.BottomNavFragment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
