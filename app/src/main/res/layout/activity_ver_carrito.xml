@@ -19,21 +19,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Título  Lista de productos -->
-
     <TextView
         android:id="@+id/tvTituloCarrito"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Carrito de compras"
+        android:text="@string/carrito_de_compras"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:textAlignment="center"
+        android:fontFamily="@font/mono_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container" />
+        app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container"
+        android:background="@color/main_color"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCarrito"
@@ -60,16 +61,18 @@
             android:id="@+id/tvTotal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total: $0"
+            android:text="@string/total_0"
             android:textSize="18sp"
             android:textColor="@color/black"
+            android:fontFamily="@font/mono_bold"
             android:paddingBottom="8dp"/>
 
         <Button
             android:id="@+id/btnRealizarPedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Realizar pedido"
+            android:text="@string/realizar_pedido"
+            android:fontFamily="@font/mono_bold"
             android:backgroundTint="@color/main_color"
             android:textColor="@android:color/white"/>
     </LinearLayout>

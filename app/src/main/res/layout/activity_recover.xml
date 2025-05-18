@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/mono_semibold"
+        android:fontFamily="@font/mono_bold"
         android:text="@string/recover_password"
         android:textColor="@color/black"
         android:textSize="30sp" />
@@ -23,7 +23,7 @@
         android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/mono_semibold"
+        android:fontFamily="@font/mono_bold"
         android:text="@string/text_new_password"
         android:textColor="@color/black"
         android:textSize="15sp" />
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:hint="@string/enter_your_email"
-        android:fontFamily="@font/mono_semibold"
+        android:fontFamily="@font/mono_bold"
         android:textColor="@color/black"
         android:textSize="15sp" />
 
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/mono_semibold"
+        android:fontFamily="@font/mono_bold"
         android:text="@string/message_email"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -60,7 +60,7 @@
         android:layout_marginTop="24dp"
         android:text="@string/send_email"
         android:textSize="18sp"
-        android:fontFamily="@font/mono_semibold"
+        android:fontFamily="@font/mono_bold"
         android:backgroundTint="@color/main_color"
         app:cornerRadius="12dp" />
 

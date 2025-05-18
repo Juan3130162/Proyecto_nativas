@@ -7,33 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".Activities.DetallesDeProductosActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/Superior_nav_container"
+        android:name="com.example.proyecto_nativas.fragments.SuperiorNavFragment"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTituloProducto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/detalles_del_producto"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/mono_bold"
+        app:layout_constraintTop_toBottomOf="@id/Superior_nav_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/main_color"/>
+
     <ImageView
         android:id="@+id/imgDetalleProducto"
         android:layout_width="0dp"
         android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/imagen_del_producto"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="Imagen del producto" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloProducto" />
 
     <TextView
         android:id="@+id/txtNombreDetalle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Nombre del producto"
+        android:text="@string/nombre_del_producto"
         android:textSize="22sp"
         android:textStyle="bold"
         android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@id/imgDetalleProducto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/mono_bold"/>
 
     <TextView
         android:id="@+id/txtPrecioDetalle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="$0"
+        android:text="@string/_0"
         android:textSize="18sp"
         android:textColor="@color/main_color"
         android:paddingStart="16dp"
@@ -45,8 +73,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="16dp"
-        android:text="Descripción del producto"
+        android:text="@string/descripci_n_del_producto"
         android:textSize="16sp"
+        android:fontFamily="@font/mono_bold"
         app:layout_constraintTop_toBottomOf="@id/txtPrecioDetalle"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav_container"
         app:layout_constraintStart_toStartOf="parent"

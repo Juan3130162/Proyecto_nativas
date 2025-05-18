@@ -13,14 +13,16 @@
             android:id="@+id/edtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre" />
+            android:hint="Nombre"
+            android:fontFamily="@font/mono_bold"/>
 
         <EditText
             android:id="@+id/edtApellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Apellido"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mono_bold"/>
 
         <EditText
             android:id="@+id/edtEdad"
@@ -28,14 +30,16 @@
             android:layout_height="wrap_content"
             android:hint="Edad"
             android:inputType="number"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mono_bold"/>
 
         <EditText
             android:id="@+id/edtUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mono_bold"/>
 
         <EditText
             android:id="@+id/edtEmailRegistro"
@@ -43,7 +47,8 @@
             android:layout_height="wrap_content"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mono_bold"/>
 
         <EditText
             android:id="@+id/edtPasswordRegistro"
@@ -51,14 +56,16 @@
             android:layout_height="wrap_content"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mono_bold"/>
 
         <Button
             android:id="@+id/btnRegistrarUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registrarse"
+            android:text="@string/registrarse"
             android:backgroundTint="@color/main_color"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/mono_bold"/>
     </LinearLayout>
 </ScrollView>

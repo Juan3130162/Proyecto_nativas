@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:background="@color/white">
 
-    <!-- Fragmento superior -->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/Superior_nav_container"
         android:name="com.example.proyecto_nativas.fragments.SuperiorNavFragment"
@@ -18,12 +18,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Título -->
+
     <TextView
         android:id="@+id/tvTituloPedidos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Lista de pedidos"
+        android:text="@string/lista_de_pedidos"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -32,9 +32,10 @@
         app:layout_constraintTop_toBottomOf="@id/Superior_nav_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="8dp"
+        android:background="@color/main_color"/>
 
-    <!-- RecyclerView para mostrar pedidos -->
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPedidos"
@@ -47,7 +48,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Texto de "No hay pedidos" -->
     <LinearLayout
         android:id="@+id/layoutSinPedidos"
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
             android:id="@+id/tvSinPedidos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No hay pedidos para mostrar."
+            android:text="@string/no_hay_pedidos_para_mostrar"
             android:textColor="@android:color/darker_gray"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -72,7 +72,7 @@
     </LinearLayout>
 
 
-    <!-- Fragmento inferior -->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/bottom_nav_container"
         android:name="com.example.proyecto_nativas.fragments.BottomNavFragment"

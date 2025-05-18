@@ -32,6 +32,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/tvTituloActualizarPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/main_color"
+                android:fontFamily="@font/mono_bold"
+                android:text="@string/actualizar_perfil"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/edtNombre"
                 android:layout_width="match_parent"
@@ -67,7 +80,7 @@
             <ImageView
                 android:id="@+id/imgPreview"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="190dp"
                 android:layout_marginTop="16dp"
                 android:background="#E0E0E0"
                 android:contentDescription="Foto de perfil"
@@ -87,7 +100,7 @@
                     android:backgroundTint="@color/main_color"
                     android:fontFamily="@font/mono_bold"
                     android:paddingLeft="80dp"
-                    android:text="Tomar Foto"
+                    android:text="@string/tomar_foto"
                     android:textColor="@color/white" />
 
                 <ImageView
@@ -104,7 +117,7 @@
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/main_color"
                 android:fontFamily="@font/mono_bold"
-                android:text="Guardar Cambios"
+                android:text="@string/guardar_cambios"
                 android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
