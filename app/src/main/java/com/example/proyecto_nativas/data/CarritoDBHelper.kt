@@ -1,4 +1,4 @@
-// ✅ PASO 1: Crear clase SQLiteOpenHelper para gestionar el carrito
+
 package com.example.proyecto_nativas.data
 
 import android.content.ContentValues

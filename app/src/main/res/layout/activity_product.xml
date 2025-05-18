@@ -27,10 +27,11 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
+        android:fontFamily="@font/mono_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container"
-        android:background="@color/second_color"/>
+        android:background="@color/main_color"/>
 
 
     <androidx.recyclerview.widget.RecyclerView

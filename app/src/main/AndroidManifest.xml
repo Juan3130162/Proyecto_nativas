@@ -66,21 +66,21 @@
         <activity
             android:name=".Activities.HomeActivity"
             android:exported="false" />
-        <activity
-            android:name=".Activities.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.ProductActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.RegisterActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".Activities.LoginActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".Activities.ProductActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".Activities.RegisterActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".Activities.RecoverActivity"
             android:exported="false" />
-        <activity
-            android:name=".Activities.ViewCarActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".Activities.ViewCarActivity"-->
+<!--            android:exported="false" />-->
 
         <provider
             android:name="androidx.core.content.FileProvider"

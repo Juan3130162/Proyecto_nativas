@@ -1,4 +1,3 @@
-// Ruta sugerida: com.example.proyecto_nativas.data.CarritoRepository.kt
 
 package com.example.proyecto_nativas.data
 

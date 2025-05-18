@@ -1,5 +1,6 @@
 package com.example.proyecto_nativas.Activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -12,11 +13,13 @@ import androidx.core.content.FileProvider
 import com.example.proyecto_nativas.R
 import com.example.proyecto_nativas.models.Producto
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
+@Suppress("DEPRECATION")
 class AddProductActivity : AppCompatActivity() {
 
     private lateinit var edtNombre: EditText
@@ -27,6 +30,7 @@ class AddProductActivity : AppCompatActivity() {
     private lateinit var btnTomarFoto: Button
 
     private lateinit var currentPhotoPath: String
+    private var photoUri: Uri? = null
     private val REQUEST_IMAGE_CAPTURE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,30 +49,30 @@ class AddProductActivity : AppCompatActivity() {
         }
 
         btnGuardar.setOnClickListener {
-            guardarProducto()
+            subirImagenYGuardarProducto()
         }
-
-        val userEmail = intent.getStringExtra("email") ?: "Usuario"
-
     }
 
+    @SuppressLint("QueryPermissionsNeeded")
     private fun abrirCamara() {
         val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         if (takePictureIntent.resolveActivity(packageManager) != null) {
             val photoFile: File? = try {
                 createImageFile()
-            } catch (ex: IOException) {
+            } catch (_: IOException) {
                 null
             }
 
             photoFile?.also {
-                val photoURI: Uri = FileProvider.getUriForFile(
+                photoUri = FileProvider.getUriForFile(
                     this,
                     "com.example.proyecto_nativas.fileprovider",
                     it
                 )
-                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri)
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+
+
             }
         }
     }
@@ -86,39 +90,57 @@ class AddProductActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            val file = File(currentPhotoPath)
-            val uri = Uri.fromFile(file)
-            imgPreview.setImageURI(uri)
+            imgPreview.setImageURI(photoUri)
         }
     }
 
-    private fun guardarProducto() {
+    private fun subirImagenYGuardarProducto() {
         val nombre = edtNombre.text.toString()
         val descripcion = edtDescripcion.text.toString()
         val precio = edtPrecio.text.toString().toIntOrNull() ?: 0
 
-        val producto = Producto(
-            id = "",
-            nombre = nombre,
-            imagen_url = currentPhotoPath, // ruta local de imagenes
-            descripcion = descripcion,
-            precio = precio
-        )
+        if (photoUri == null) {
+            Toast.makeText(this, "Debes tomar una foto", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        val db = FirebaseFirestore.getInstance()
+        val storageRef = FirebaseStorage.getInstance().reference
+        val nombreImagen = "IMG_${UUID.randomUUID()}.jpg"
+        val fotoRef = storageRef.child("imagenes_productos/$nombreImagen")
 
-        db.collection("productos")
-            .add(producto)
-            .addOnSuccessListener { documentRef ->
-                val idGenerado = documentRef.id
-                db.collection("productos").document(idGenerado)
-                    .update("id", idGenerado)
-                Toast.makeText(this, "Producto guardado", Toast.LENGTH_SHORT).show()
-                finish()
+        fotoRef.putFile(photoUri!!)
+            .addOnSuccessListener {
+                fotoRef.downloadUrl.addOnSuccessListener { uri ->
+                    val imagenUrl = uri.toString()
+
+                    val producto = Producto(
+                        id = "",
+                        nombre = nombre,
+                        imagen_url = imagenUrl,
+                        descripcion = descripcion,
+                        precio = precio
+                    )
+
+                    val db = FirebaseFirestore.getInstance()
+                    db.collection("productos")
+                        .add(producto)
+                        .addOnSuccessListener { documentRef ->
+                            val idGenerado = documentRef.id
+                            db.collection("productos").document(idGenerado)
+                                .update("id", idGenerado)
+
+                            Toast.makeText(this, "Producto guardado", Toast.LENGTH_SHORT).show()
+                            finish()
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(this, "Error al guardar en Firestore", Toast.LENGTH_SHORT).show()
+                            Log.e("Firestore", "Error:", it)
+                        }
+                }
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
-                Log.e("Firestore", "Error: ", it)
+                Toast.makeText(this, "Error al subir la imagen", Toast.LENGTH_SHORT).show()
+                Log.e("FirebaseStorage", "Error:", it)
             }
     }
 }

@@ -108,6 +108,6 @@
         android:id="@+id/bnt_inicio_sesion_alt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="inicio de sesion alternativo" />
+        android:text="@string/inicio_de_sesion_alternativo" />
 
 </LinearLayout>
