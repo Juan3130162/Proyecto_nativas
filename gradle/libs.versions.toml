@@ -40,4 +40,3 @@ firebase-storage = { module = "com.google.firebase:firebase-storage-ktx", versio
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 googleService={id="com.google.gms.google-services", version.ref="googleServiceV"}
-

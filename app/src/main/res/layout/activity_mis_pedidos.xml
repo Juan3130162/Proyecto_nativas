@@ -20,7 +20,7 @@
         android:id="@+id/tvTituloPedidos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Mis pedidos"
+        android:text="@string/mis_pedidos"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -29,7 +29,8 @@
         app:layout_constraintTop_toBottomOf="@id/Superior_nav_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:background="@color/main_color"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPedidos"
@@ -46,7 +47,7 @@
         android:id="@+id/tvSinPedidos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="No has realizado ningún pedido."
+        android:text="@string/no_has_realizado_ning_n_pedido"
         android:textColor="@android:color/darker_gray"
         android:textAlignment="center"
         android:textSize="16sp"

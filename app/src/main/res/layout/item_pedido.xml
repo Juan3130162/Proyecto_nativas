@@ -15,29 +15,32 @@
             android:id="@+id/txtPedidoId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ID del Pedido"
-            android:textStyle="bold"
+            android:text="@string/id_del_pedido"
+            android:fontFamily="@font/mono_bold"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/txtNombreUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre del usuario"
+            android:text="@string/nombre_del_usuario"
+            android:fontFamily="@font/mono_bold"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/txtEmailUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correo del usuario"
+            android:text="@string/correo_del_usuario"
+            android:fontFamily="@font/mono_bold"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/txtTotalPedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total: $0"
+            android:text="@string/total_0"
+            android:fontFamily="@font/mono_bold"
             android:textColor="@color/main_color"
             android:textStyle="bold"
             android:paddingTop="4dp" />
@@ -46,7 +49,8 @@
             android:id="@+id/txtProductosPedido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Productos: ..."
+            android:text="@string/productos"
+            android:fontFamily="@font/mono_bold"
             android:paddingTop="4dp"
             android:textColor="@color/black" />
 
@@ -55,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mono_bold"
-            android:text="Estado: Pendiente"
+            android:text="@string/estado_pendiente"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
             android:paddingTop="4dp"/>
@@ -66,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Atender pedido"
+            android:text="@string/atender_pedido"
             android:backgroundTint="@color/main_color"
             android:textColor="@android:color/white"
             android:fontFamily="@font/mono_bold"

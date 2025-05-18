@@ -7,17 +7,34 @@
     android:padding="16dp"
     tools:context=".Activities.ProfileActivity">
 
+    <TextView
+        android:id="@+id/tvTituloPerfil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/main_color"
+        android:fontFamily="@font/mono_bold"
+        android:text="@string/mi_perfil"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Superior_nav_container" />
+
     <ImageView
         android:id="@+id/imgFotoPerfil"
         android:layout_width="224dp"
         android:layout_height="191dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Superior_nav_container" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloPerfil" />
 
     <TextView
         android:id="@+id/txtNombrePerfil"
@@ -25,7 +42,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/mono_bold"
-        android:text="Nombre"
+        android:text="@string/nombre"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -40,7 +57,7 @@
         android:layout_height="20dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/mono_bold"
-        android:text="Correo"
+        android:text="@string/correo"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +70,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/mono_bold"
-        android:text="Usuario"
+        android:text="@string/usuario"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -68,7 +85,7 @@
         android:layout_height="29dp"
         android:fontFamily="@font/mono_bold"
         android:lineSpacingExtra="16sp"
-        android:text="Apellido"
+        android:text="@string/apellido"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -81,7 +98,7 @@
         android:id="@+id/btnEditarPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/main_color"
         android:fontFamily="@font/mono_bold"
         android:text="@string/editar_perfil"
@@ -102,14 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottom_nav_container"
-        android:name="com.example.proyecto_nativas.fragments.BottomNavFragment"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -127,7 +137,7 @@
             android:layout_width="183dp"
             android:layout_height="match_parent"
             android:fontFamily="@font/mono_bold"
-            android:text="Edad:"
+            android:text="@string/edad"
             android:textAlignment="textEnd" />
 
         <TextView
@@ -135,9 +145,21 @@
             android:layout_width="175dp"
             android:layout_height="match_parent"
             android:fontFamily="@font/mono_bold"
-            android:text="Edad"
+            android:text="@string/edad"
             android:textAlignment="textStart"
             android:textStyle="bold" />
+
     </LinearLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottom_nav_container"
+            android:name="com.example.proyecto_nativas.fragments.BottomNavFragment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

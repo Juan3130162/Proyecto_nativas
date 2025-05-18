@@ -7,6 +7,6 @@ data class Pedido(
     val email: String = "",
     val productos: List<ProductoSQLite> = emptyList(),
     val total: Int = 0,
-    val atendido: Boolean = false, // 🚨 este campo indica si ya fue gestionado
+    val atendido: Boolean = false, // indica si fue gestionado
     val timestamp: Long = System.currentTimeMillis()
 )

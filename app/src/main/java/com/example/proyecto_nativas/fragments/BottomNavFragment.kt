@@ -38,6 +38,7 @@ class BottomNavFragment : Fragment() {
         btnCart = view.findViewById(R.id.btnCart)
         btnProfile = view.findViewById(R.id.btnProfile)
         tvUserEmail = view.findViewById(R.id.tvUserEmail)
+
         cartBadge = view.findViewById(R.id.cartBadge)
 
         userEmail = FirebaseAuth.getInstance().currentUser?.email
@@ -55,7 +56,7 @@ class BottomNavFragment : Fragment() {
 
         btnProfile.setOnClickListener { showProfileMenu(it) }
 
-        CarritoRepository.init(requireContext()) // ✅ Inicializa el repositorio
+        CarritoRepository.init(requireContext()) // Inicializa el repositorio
         updateCartBadge()
 
         // 📡 Escuchar el broadcast desde ProductoAdapter
