@@ -84,4 +84,5 @@
     <string name="atender_pedido">Atender pedido</string>
     <string name="agregar_al_carrito">Agregar al carrito</string>
     <string name="administrador">Administrador</string>
+    <string name="default_web_client_id" translatable="false">739440269703-3626cd1le2pd4r9oo0mdpm95rsd6shmg.apps.googleusercontent.com</string>
 </resources>
