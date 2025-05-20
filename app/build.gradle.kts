@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("org.jetbrains.kotlin.kapt")
-    alias(libs.plugins.googleService)
+    id("com.google.gms.google-services")
+    kotlin("kapt")
 
 }
 
@@ -53,18 +53,22 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
     implementation(libs.glide)
+
     kapt(libs.glideCompiler)
 
     implementation(libs.gson)
-
     implementation(libs.firestore)
-
     implementation(libs.firebase.storage)
+
 
     implementation("com.google.android.gms:play-services-maps:19.2.0")
 
-
-
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
+    implementation("com.google.firebase:firebase-auth-ktx")   // kotlin extension
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-storage-ktx")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 
 
 }
