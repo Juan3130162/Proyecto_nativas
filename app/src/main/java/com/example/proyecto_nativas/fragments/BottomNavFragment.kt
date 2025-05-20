@@ -135,6 +135,11 @@ class BottomNavFragment : Fragment() {
                             requireActivity().finish()
                             true
                         }
+                        R.id.puntos_de_venta -> {
+                            startActivity(Intent(requireContext(), MapsActivity::class.java))
+                            requireActivity().finish()
+                            true
+                        }
                         else -> false
                     }
                 }

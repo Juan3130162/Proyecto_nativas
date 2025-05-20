@@ -24,4 +24,6 @@
         android:layout_weight="1"
         app:srcCompat="@drawable/logo_inicio" />
 
+
+
 </LinearLayout>
