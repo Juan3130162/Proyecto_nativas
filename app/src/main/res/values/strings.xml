@@ -84,4 +84,9 @@
     <string name="atender_pedido">Atender pedido</string>
     <string name="agregar_al_carrito">Agregar al carrito</string>
     <string name="administrador">Administrador</string>
+    <string name="bogota">Bogota</string>
+    <string name="cali">Cali</string>
+    <string name="villavicencio">Villavicencio</string>
+    <string name="guajira">Guajira</string>
+    <string name="tiendas">Tiendas</string>
 </resources>
