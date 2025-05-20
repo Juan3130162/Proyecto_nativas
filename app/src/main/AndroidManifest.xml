@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_nativas"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDgCjg8qSFF_wCHlxtqr2lE8s5FKMaDnUY"/>
+
+
         <activity
             android:name=".Activities.VerUsuariosActivity"
             android:exported="false" />
@@ -51,6 +57,10 @@
         <activity
             android:name=".Activities.ProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".Activities.MapsActivity"
+            android:exported="false" />
+
         <activity
             android:name=".Activities.SplashActivity"
             android:exported="false">

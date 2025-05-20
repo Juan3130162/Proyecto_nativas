@@ -59,11 +59,16 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.firestore)
     implementation(libs.firebase.storage)
+
+
+    implementation("com.google.android.gms:play-services-maps:19.2.0")
+
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation(platform("com.google.firebase:firebase-bom:33.13.0"))
     implementation("com.google.firebase:firebase-auth-ktx")   // kotlin extension
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+
 
 }
