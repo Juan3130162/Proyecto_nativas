@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.proyecto_nativas.R
 import java.io.File
 
@@ -27,9 +28,18 @@ class DetallesDeProductosActivity : AppCompatActivity() {
         txtPrecio.text = "$$precio"
         txtDescripcion.text = descripcion
 
-        val file = File(imagenUrl)
-        if (file.exists()) {
-            imgProducto.setImageURI(Uri.fromFile(file))
+//        val file = File(imagenUrl)
+//        if (file.exists()) {
+//            imgProducto.setImageURI(Uri.fromFile(file))
+//        } else {
+//            imgProducto.setImageResource(R.drawable.ic_placeholder)
+//        }
+        if (imagenUrl.isNotEmpty()) {
+            Glide.with(this)
+                .load(imagenUrl)
+                .placeholder(R.drawable.ic_placeholder)
+                .error(R.drawable.ic_placeholder)
+                .into(imgProducto)
         } else {
             imgProducto.setImageResource(R.drawable.ic_placeholder)
         }
