@@ -38,6 +38,7 @@ class ListaProductosActivity : AppCompatActivity() {
             },
             onItemClick = { producto ->
                 val intent = Intent(this, DetallesDeProductosActivity::class.java)
+                intent.putExtra("producto_id", producto.id)
                 intent.putExtra("producto_nombre", producto.nombre)
                 intent.putExtra("producto_precio", producto.precio)
                 intent.putExtra("producto_descripcion", producto.descripcion)

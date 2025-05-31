@@ -24,6 +24,9 @@ class EditarPerfilActivity : AppCompatActivity() {
     private lateinit var btnGuardar: Button
     private lateinit var btnTomarFoto: Button
 
+    private var esAdmin: Boolean = false
+
+
     private val uid = FirebaseAuth.getInstance().currentUser?.uid
     private val db = FirebaseFirestore.getInstance()
     private val storage = FirebaseStorage.getInstance()
@@ -90,7 +93,8 @@ class EditarPerfilActivity : AppCompatActivity() {
             "apellido" to apellido,
             "edad" to edad,
             "usuario" to usuario,
-            "email" to FirebaseAuth.getInstance().currentUser?.email.orEmpty()
+            "email" to FirebaseAuth.getInstance().currentUser?.email.orEmpty(),
+            "admin" to esAdmin
         )
 
         urlFoto?.let {
@@ -121,7 +125,10 @@ class EditarPerfilActivity : AppCompatActivity() {
                     val url = doc.getString("foto_url")
                     if (!url.isNullOrEmpty()) {
                         Glide.with(this).load(url).into(imgPreview)
+                        esAdmin = doc.getBoolean("admin") ?: false
                     }
+
+
                 }
             }
     }

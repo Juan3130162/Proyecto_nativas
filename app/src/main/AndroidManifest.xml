@@ -12,11 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_nativas"
         tools:targetApi="31">
+        <activity
+            android:name=".Activities.EditarProductoActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDgCjg8qSFF_wCHlxtqr2lE8s5FKMaDnUY"/>
-
+            android:value="AIzaSyDgCjg8qSFF_wCHlxtqr2lE8s5FKMaDnUY" />
 
         <activity
             android:name=".Activities.VerUsuariosActivity"
@@ -60,10 +62,9 @@
         <activity
             android:name=".Activities.MapsActivity"
             android:exported="false" />
-
         <activity
             android:name=".Activities.SplashActivity"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -75,23 +76,20 @@
             android:exported="false" />
         <activity
             android:name=".Activities.HomeActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".Activities.LoginActivity"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".Activities.ProductActivity"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".Activities.RegisterActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Activities.LoginActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".Activities.ProductActivity" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".Activities.RegisterActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".Activities.RecoverActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".Activities.ViewCarActivity"-->
-<!--            android:exported="false" />-->
-
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Activities.ViewCarActivity" -->
+        <!-- android:exported="false" /> -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.proyecto_nativas.fileprovider"
