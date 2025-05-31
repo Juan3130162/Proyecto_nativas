@@ -97,9 +97,9 @@ class DetallesDeProductosActivity : AppCompatActivity() {
 
     private fun mostrarConfirmacionEliminacion() {
         AlertDialog.Builder(this)
-            .setTitle("Eliminar producto")
-            .setMessage("¿Estás seguro de que deseas eliminar este producto?")
-            .setPositiveButton("Sí") { _, _ -> eliminarProducto() }
+            .setTitle("Confirmar eliminación")
+            .setMessage("¿Estás seguro de que deseas eliminar este producto? Esta acción no se puede deshacer.")
+            .setPositiveButton("Eliminar") { _, _ -> eliminarProducto() }
             .setNegativeButton("Cancelar", null)
             .show()
     }
@@ -111,12 +111,16 @@ class DetallesDeProductosActivity : AppCompatActivity() {
             .document(id)
             .delete()
             .addOnSuccessListener {
-                Toast.makeText(this, "Producto eliminado", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Producto eliminado exitosamente", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ListaProductosActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
                 finish()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Error al eliminar el producto", Toast.LENGTH_SHORT).show()
             }
     }
+
 }
 
