@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.proyecto_nativas.Activities.*
+import com.example.proyecto_nativas.Activities.Galeria.GalleryActivity
 import com.example.proyecto_nativas.Activities.LoginAlternativo.InicioSesionActivity
 import com.example.proyecto_nativas.Activities.Pedidos.MisPedidosActivity
 import com.example.proyecto_nativas.R
@@ -127,6 +128,11 @@ class BottomNavFragment : Fragment() {
                         }
                         R.id.lista_de_producto -> {
                             startActivity(Intent(requireContext(), ListaProductosActivity::class.java))
+                            true
+                        }
+
+                        R.id.galeria -> {
+                            startActivity(Intent(requireContext(), GalleryActivity::class.java))
                             true
                         }
                         R.id.menu_logout -> {

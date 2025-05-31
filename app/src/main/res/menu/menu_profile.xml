@@ -23,6 +23,10 @@
         android:title="Puntos de venta" />
 
     <item
+        android:id="@+id/galeria"
+        android:title="Galería de fotos" />
+
+    <item
         android:id="@+id/menu_logout"
         android:title="Cerrar sesión" />
 </menu>
